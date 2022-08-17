@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const TableDeposits = () => {
+  const navigate = useNavigate();
   const token = sessionStorage.getItem('token');
 
   const [list, setList] = useState([]);
@@ -14,7 +15,7 @@ export const TableDeposits = () => {
     if (depositsList.Status === 0) {
       setList(depositsList.Data);
     } else {
-      useNavigate('/annual-sdk-web/login');
+      navigate('/annual-sdk-web/login');
     }
   };
 

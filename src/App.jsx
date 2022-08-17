@@ -4,13 +4,15 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 
 function App() {
+  const navigate = useNavigate();
+
   const handleClick = () => {
     sessionStorage.clear('token');
-    useNavigate('/annual-sdk-web/login');
+    navigate('/annual-sdk-web/login');
   };
 
   return (
-    <BrowserRouter>
+    <div>
       <header className="w-full bg-off-gray">
         <div className="flex justify-between py-2 px-6">
           <h1 className="text-2xl font-semibold text-off-white">Annual SDK Depositos</h1>
@@ -28,7 +30,7 @@ function App() {
         <Route path="/annual-sdk-web/" element={<Home />} />
         <Route path="/" />
       </Routes>
-    </BrowserRouter>
+    </div>
   );
 }
 
