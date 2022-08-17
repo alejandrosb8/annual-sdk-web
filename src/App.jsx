@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/annual-sdk-web/login" element={<Login />} />
         <Route path="/annual-sdk-web/" element={<Home />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" />
       </Routes>
     </BrowserRouter>
   );
