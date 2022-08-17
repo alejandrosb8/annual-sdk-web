@@ -25,7 +25,7 @@ export const TableDeposits = () => {
   return (
     <div>
       {!token || error === true ? (
-        <Navigate to="/login" />
+        <Navigate to="/annual-sdk-web/login" />
       ) : (
         <div className="flex flex-col w-full mx-auto mt-6 max-w-screen-lg">
           <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">

@@ -22,7 +22,7 @@ export default function LoginTab() {
 
     if (tokenData.Status === 0) {
       sessionStorage.setItem('token', tokenData.Message);
-      navigate('/');
+      navigate('/annual-sdk-web');
     } else {
       setError('*' + tokenData.Message);
     }
