@@ -22,7 +22,6 @@ export default function LoginTab() {
 
     if (tokenData.Status === 0) {
       sessionStorage.setItem('token', tokenData.Message);
-      console.log(sessionStorage.getItem('token'));
       navigate('/');
     } else {
       setError('*' + tokenData.Message);
