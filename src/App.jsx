@@ -8,7 +8,7 @@ function App() {
   const [logout, setLogout] = useState(false);
   const navLogin = () => {
     if (logout) {
-      return <Navigate to="/login" />;
+      return <Navigate to="annual-sdk-web/login" />;
     }
   };
 
@@ -33,8 +33,8 @@ function App() {
       </header>
       {navLogin()}
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="annual-sdk-web/login" element={<Login />} />
+        <Route path="annual-sdk-web/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
