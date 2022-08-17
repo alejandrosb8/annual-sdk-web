@@ -33,8 +33,9 @@ function App() {
       </header>
       {navLogin()}
       <Routes>
-        <Route path="annual-sdk-web/login" element={<Login />} />
-        <Route path="annual-sdk-web/" element={<Home />} />
+        <Route path="/annual-sdk-web/login" element={<Login />} />
+        <Route path="/annual-sdk-web/" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
