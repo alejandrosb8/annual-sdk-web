@@ -1,20 +1,12 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, Navigate, useNavigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import { useState } from 'react';
 
 function App() {
-  const [logout, setLogout] = useState(false);
-  const navLogin = () => {
-    if (logout) {
-      return <Navigate to="annual-sdk-web/login" />;
-    }
-  };
-
   const handleClick = () => {
     sessionStorage.clear('token');
-    setLogout(true);
+    useNavigate('/annual-sdk-web/login');
   };
 
   return (
@@ -31,7 +23,6 @@ function App() {
         </div>
         <div className="w-full h-1 bg-off-orange"></div>
       </header>
-      {navLogin()}
       <Routes>
         <Route path="/annual-sdk-web/login" element={<Login />} />
         <Route path="/annual-sdk-web/" element={<Home />} />

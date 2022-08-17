@@ -2,7 +2,6 @@ import React from 'react';
 import { addDeposit } from '../utils/api';
 import { InputDeposit } from './InputDeposit';
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
 
 export const AddDepositForm = () => {
   const token = sessionStorage.getItem('token');

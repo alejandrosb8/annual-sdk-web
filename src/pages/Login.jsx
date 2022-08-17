@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import LoginTab from '../components/LoginTab';
 
 export default function Login() {

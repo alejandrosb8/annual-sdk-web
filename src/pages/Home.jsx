@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { AddDepositForm } from '../components/AddDepositForm';
 import { TableDeposits } from '../components/TableDeposits';
 
