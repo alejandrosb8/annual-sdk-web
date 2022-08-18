@@ -28,4 +28,13 @@ const addDeposit = async (deposito, token) => {
   }
 };
 
-export { getToken, getDeposits, addDeposit };
+const deleteDeposit = async (codigoDeposito, token) => {
+  try {
+    const resp = await axios.post(`${url}/deposits/delete`, { codigoDeposito, token });
+    return resp.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { getToken, getDeposits, addDeposit, deleteDeposit };

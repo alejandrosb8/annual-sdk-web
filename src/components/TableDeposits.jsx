@@ -1,28 +1,7 @@
 import React from 'react';
-import { getDeposits } from '../utils/api';
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { DeleteDepositButton } from './DeleteDepositButton';
 
-export const TableDeposits = () => {
-  const navigate = useNavigate();
-  const token = sessionStorage.getItem('token');
-
-  const [list, setList] = useState([]);
-  const [error, serError] = useState(false);
-
-  const fetchData = async () => {
-    const depositsList = await getDeposits(token);
-    if (depositsList.Status === 0) {
-      setList(depositsList.Data);
-    } else {
-      navigate('/annual-sdk-web/login');
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+export const TableDeposits = (props) => {
   return (
     <div>
       <div className="flex flex-col w-full mx-auto mt-6 max-w-screen-lg">
@@ -47,10 +26,13 @@ export const TableDeposits = () => {
                     <th scope="col" className="text-md font-medium text-white px-6 py-4">
                       Telefono
                     </th>
+                    <th scope="col" className="text-md font-medium text-white px-6 py-4">
+                      Borrar
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {list.map((x) => {
+                  {props.data.map((x) => {
                     return (
                       <tr key="x.Codigo" className="[border-bottom:2px_solid_#000] hover:bg-gray-300">
                         <td className="truncate p-3">{x.Codigo}</td>
@@ -58,6 +40,9 @@ export const TableDeposits = () => {
                         <td className="truncate p-3">{x.Direccion1}</td>
                         <td className="truncate p-3">{x.Representante}</td>
                         <td className="truncate p-3">{x.Telefono}</td>
+                        <td className="truncate p-3">
+                          <DeleteDepositButton id={x.Codigo} />
+                        </td>
                       </tr>
                     );
                   })}
