@@ -30,46 +30,26 @@ export default function LoginTab() {
     //navigate('/');
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="flex flex-col items-center gap-y-6 shadow-xl p-6 bg-gray-200 relative rounded">
-        <span className="absolute [left:0] [top:0] [bottom:0] w-[3px] bg-off-orange"></span>
-        <div className="flex flex-col items-center gap-y-3">
-          <div className="flex flex-col items-start">
-            <label htmlFor="idUser" className="text-md font-semibold text-gray-800">
-              Nombre
-            </label>
-            <input
-              type="text"
-              id="idUser"
-              name="idUser"
-              placeholder="Ingresa el nombre de usuario..."
-              className="bg-white focus:outline-none focus:ring focus:ring-off-orange rounded w-60 px-2 text-lg h-8 md:w-80 shadow-sm"
-              required
-            />
-          </div>
-          <div className="flex flex-col items-start">
-            <label htmlFor="password" className="text-md font-semibold text-gray-800">
-              Clave
-            </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Ingresa la clave..."
-              className="bg-white focus:outline-none focus:ring focus:ring-off-orange rounded w-60 px-2 text-lg h-8 md:w-80 shadow-sm"
-              required
-            />
-          </div>
+    <main className="w-full mx-auto">
+      <div className="h-auto w-full max-w-xl mx-auto mt-32 relative">
+        <div className="w-4/5 h-auto bg-white rounded-xl mx-auto max-w-xl z-10 shadow-xl">
+          <form onSubmit={handleSubmit} className="flex justify-between items-center flex-col gap-12 px-6 py-16 z-10">
+            <h2 className="text-3xl font-bold text-blue-saint">{'Iniciar Sección'}</h2>
+            <div className="flex justify-between items-center flex-col gap-4 w-4/5">
+              <input type="text" id="idUser" placeholder="Correo..." className="w-full bg-gray-100 text-xl py-1 px-2" />
+              <input type="text" id="password" placeholder="Contraseña..." className="w-full bg-gray-100 text-xl py-1 px-2" />
+            </div>
+            <button
+              type="submit"
+              className="border-transparent border-2 px-3 py-1 bg-blue-saint text-white transition-colors hover:bg-white hover:border-blue-saint hover:text-blue-saint font-bold"
+            >
+              {'Iniciar Sección'}
+            </button>
+            {loading && <LoadingIcon />}
+          </form>
+          <p className="w-full text-center text-red-600 py-1">{error}</p>
         </div>
-        <button
-          type="submit"
-          className="bg-off-gray px-6 py-1 text-xl text-off-white rounded transition-colors hover:bg-off-orange shadow-md"
-        >
-          Login
-        </button>
-      </form>
-      {loading && <LoadingIcon />}
-      <p className="text-center mt-4 font-semibold text-red-600">{error}</p>
-    </div>
+      </div>
+    </main>
   );
 }

@@ -13,17 +13,17 @@ function App() {
 
   return (
     <div>
-      <header className="w-full bg-off-gray">
+      <header className="w-full bg-blue-saint">
         <div className="flex justify-between py-2 px-6">
-          <h1 className="text-2xl font-semibold text-off-white">Annual SDK Depositos</h1>
+          <h1 className="text-3xl font-semibold text-off-white">SAINT</h1>
           <button
             onClick={handleClick}
-            className="text-off-white px-2 py-1 border-2 border-off-orange rounded font-semibold text-base hover:bg-off-orange"
+            className="text-off-white px-2 py-1 border-2 border-off-white rounded font-semibold text-base hover:bg-off-white hover:text-blue-saint"
           >
             Logout
           </button>
         </div>
-        <div className="w-full h-1 bg-off-orange"></div>
+        <div className="w-full h-1 bg-orange-saint"></div>
       </header>
       <Routes>
         <Route path="/annual-sdk-web/login" element={<Login />} />

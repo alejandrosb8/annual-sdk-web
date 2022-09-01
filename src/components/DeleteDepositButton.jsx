@@ -17,7 +17,7 @@ export const DeleteDepositButton = (props) => {
     }
   };
   return (
-    <button onClick={handleClick} className="p-1 border-2 border-off-orange rounded transition-colors hover:bg-off-orange">
+    <button onClick={handleClick} className="p-1 border-2 border-blue-saint rounded transition-colors hover:bg-blue-saint">
       <TrashIcon color="#333636" />
     </button>
   );

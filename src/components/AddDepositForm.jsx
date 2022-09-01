@@ -49,7 +49,7 @@ export const AddDepositForm = () => {
           <InputDeposit name="representante" type="text" />
           <InputDeposit name="telefono" type="tel" />
         </div>
-        <button className="bg-off-gray px-6 py-1 text-xl text-off-white rounded transition-colors hover:bg-off-orange shadow-md">
+        <button className="bg-off-gray px-6 py-1 text-xl text-off-white rounded transition-colors hover:bg-blue-saint shadow-md">
           Agregar
         </button>
       </form>

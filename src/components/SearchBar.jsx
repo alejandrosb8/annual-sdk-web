@@ -13,10 +13,10 @@ export const SearchBar = (props) => {
           placeholder="Buscar..."
           id="searchInput"
           type="text"
-          className="bg-white shadow-lg w-full px-2 py-1 focus:outline-none text-md rounded-md"
+          className="bg-white shadow-lg w-full px-2 py-1 focus:outline-none text-md rounded-md text-xl"
         />
         <button type="submit" className="absolute [right:0px] [top:0] [bottom:0] px-2 rounded-md transition-colors hover:bg-off-gray">
-          <SearchIcon color={'#ed581e'} />
+          <SearchIcon color={'#46a2fd'} />
         </button>
       </div>
     </form>

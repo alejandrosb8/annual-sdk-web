@@ -10,7 +10,7 @@ export const TableDeposits = (props) => {
             <div className="">
               <table className="min-w-full text-center bg-gray-200">
                 <thead className=" bg-off-gray">
-                  <tr className="[border-bottom:4px_solid_#ed581e]">
+                  <tr className="[border-bottom:4px_solid_#46a2fd]">
                     <th scope="col" className="text-md font-medium text-white px-6 py-4">
                       Codigo
                     </th>
